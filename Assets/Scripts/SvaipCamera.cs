@@ -18,7 +18,7 @@ using UnityEngine.UI;
             Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
 
             // Add this part after the other Rotation lines
-            transform.Rotate(0f, 0f, (touchDeltaPosition.y * touchRotAdjust) / 3, Space.Self);
+            transform.Rotate((touchDeltaPosition.x * touchRotAdjust) / 3, 0f, 0f, Space.Self);
         }
 
     }
