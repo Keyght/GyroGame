@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 49744328}
   - component: {fileID: 49744327}
   - component: {fileID: 49744326}
+  - component: {fileID: 49744331}
   m_Layer: 0
   m_Name: FireSphere
   m_TagString: Untagged
@@ -318,6 +319,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &49744331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49744325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9065ac80b153f74428b25ff3d36d938d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 90
 --- !u!1 &165585583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3d18479e2e2679e488e4673de2a4de6b,
@@ -662,6 +676,7 @@ GameObject:
   - component: {fileID: 1069645482}
   - component: {fileID: 1069645481}
   - component: {fileID: 1069645480}
+  - component: {fileID: 1069645484}
   - component: {fileID: 1069645479}
   m_Layer: 0
   m_Name: StoneSphere
@@ -759,6 +774,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1069645484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069645478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9065ac80b153f74428b25ff3d36d938d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 90
 --- !u!1 &1114040580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1080,7 @@ GameObject:
   - component: {fileID: 1421484323}
   - component: {fileID: 1421484322}
   - component: {fileID: 1421484321}
+  - component: {fileID: 1421484326}
   m_Layer: 0
   m_Name: AirSphere
   m_TagString: Untagged
@@ -1149,6 +1178,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421484326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421484320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9065ac80b153f74428b25ff3d36d938d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 90
 --- !u!1 &1858069453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1288,7 @@ GameObject:
   - component: {fileID: 1898875379}
   - component: {fileID: 1898875378}
   - component: {fileID: 1898875377}
+  - component: {fileID: 1898875382}
   m_Layer: 0
   m_Name: WaterSphere
   m_TagString: Untagged
@@ -1342,6 +1385,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898875382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898875376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9065ac80b153f74428b25ff3d36d938d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 90
 --- !u!1001 &2008413576
 PrefabInstance:
   m_ObjectHideFlags: 0
