@@ -5,19 +5,18 @@ using UnityEngine.UI;
 
 public class MooveTheCamera : MonoBehaviour
 {
-
+    public GameObject Camera_obj;
     CharacterController _charactercontroller;
     public float speedrotation;
     private float speed; //Скорость перемещения
-    public Button ww;
-    public Button ss;
     public int ii;
 
     void Start()
     {
-        _charactercontroller = GetComponent<CharacterController>();
+        _charactercontroller = Camera_obj.GetComponent<CharacterController>();
         speed = 1;
         speedrotation = 3;
+        ii = 0;
     }
 
     void Update()
@@ -25,7 +24,7 @@ public class MooveTheCamera : MonoBehaviour
         transform.Rotate(0, Input.GetAxis("Horizontal") * speedrotation, 0);
         //if (Input.GetMouseButtonDown(0))
         //{
-            
+
         //}
         ii = FindObjectOfType<MooveButtons>().i;
         //Двигаемся вперед по вектору камеры
@@ -42,20 +41,21 @@ public class MooveTheCamera : MonoBehaviour
         }
 
 
-        if (ii==1)
+        if (ii == 1)
         {
             Debug.Log("MooveTheCamera ww" + ii);
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             _charactercontroller.SimpleMove(forward * speed);
-            
+            ii = 0;
+
         }
         //Движение назад по вектору камеры
-        if (ii==-1)
+        if (ii == -1)
         {
             Debug.Log("MooveTheCamera ss" + ii);
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             _charactercontroller.SimpleMove(-forward * speed);
-           
+
         }
     }
 }

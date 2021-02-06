@@ -15,24 +15,22 @@ public class MooveButtons : MonoBehaviour
         mybuttonww.onClick.AddListener(whattodoww);
         mybuttonss.onClick.AddListener(whattodoss);
     }
-    public void whattodoww() {
-        i = 1;
-        Debug.Log("MooveButtons ww"+i);
-    }
-
-    public void onUp()
+    public void whattodoww()
     {
-        i = 0;
+        i = 1;
+        Debug.Log("MooveButtons ww" + i);
     }
 
-    public void whattodoss() {
+
+    public void whattodoss()
+    {
         i = -1;
-        Debug.Log("MooveButtons ss"+ i);
+        Debug.Log("MooveButtons ss" + i);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       // i = FindObjectOfType<MooveTheCamera>().ii;
     }
 }
