@@ -33,7 +33,7 @@ public class Button3 : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, Input.GetAxis("Horizontal") * speedrotation, 0);
+        //transform.Rotate(0, Input.GetAxis("Horizontal") * speedrotation, 0);
         if (Pressed)
         {
             Debug.Log("Кнопка нажата");
