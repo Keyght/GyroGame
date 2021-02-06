@@ -27,7 +27,9 @@ public class MooveButtons : MonoBehaviour
         i = -1;
         Debug.Log("MooveButtons ss" + i);
     }
-
+    public void itoonull() {
+        i = 0;
+    }
     // Update is called once per frame
     void Update()
     {

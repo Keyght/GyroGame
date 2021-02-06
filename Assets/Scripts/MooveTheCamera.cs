@@ -18,8 +18,11 @@ public class MooveTheCamera : MonoBehaviour
         speedrotation = 3;
         ii = 0;
     }
-
-    void Update()
+    public void itoonull()
+    {
+        ii = 0;
+    }
+    public void Update()
     {
         transform.Rotate(0, Input.GetAxis("Horizontal") * speedrotation, 0);
         //if (Input.GetMouseButtonDown(0))
@@ -46,7 +49,6 @@ public class MooveTheCamera : MonoBehaviour
             Debug.Log("MooveTheCamera ww" + ii);
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             _charactercontroller.SimpleMove(forward * speed);
-            ii = 0;
 
         }
         //Движение назад по вектору камеры

@@ -207,7 +207,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58616765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5200001}
+  m_LocalPosition: {x: 0, y: 0, z: 1.46}
   m_LocalScale: {x: -0.0034775508, y: -0.0035341776, z: -0.020547166}
   m_Children:
   - {fileID: 508542800}
@@ -217,7 +217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.030000001, y: -0.029999971}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1139, y: 496}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &508542795
@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 508542798}
   - component: {fileID: 508542797}
   - component: {fileID: 508542796}
+  - component: {fileID: 508542801}
   m_Layer: 5
   m_Name: Buttonssww
   m_TagString: Untagged
@@ -284,7 +285,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 508542797}
-        m_MethodName: whattodoww
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -303,12 +304,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 508542795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb618422069a3ba4384d9b93a34caeb5, type: 3}
+  m_Script: {fileID: 11500000, guid: a16be1dbb8a77514487f91aa61745f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mybuttonww: {fileID: 508542796}
-  mybuttonss: {fileID: 708917342}
-  i: 0
+  Camera_obj: {fileID: 1347279018}
+  speedrotation: 0
+  Pressed: 0
 --- !u!114 &508542798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +365,49 @@ RectTransform:
   m_AnchoredPosition: {x: 521, y: 0.00001001358}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &508542801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508542795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 508542797}
+          m_MethodName: onDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 508542797}
+          m_MethodName: onUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &708917340
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,8 +419,9 @@ GameObject:
   - component: {fileID: 708917341}
   - component: {fileID: 708917345}
   - component: {fileID: 708917344}
-  - component: {fileID: 708917343}
+  - component: {fileID: 708917346}
   - component: {fileID: 708917342}
+  - component: {fileID: 708917343}
   m_Layer: 5
   m_Name: Buttonssss
   m_TagString: Untagged
@@ -446,8 +491,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 708917343}
-        m_MethodName: whattodoss
+      - m_Target: {fileID: 708917346}
+        m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -466,12 +511,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 708917340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb618422069a3ba4384d9b93a34caeb5, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mybuttonww: {fileID: 508542796}
-  mybuttonss: {fileID: 708917342}
-  i: 0
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 708917346}
+          m_MethodName: onDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 708917346}
+          m_MethodName: onUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &708917344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +581,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708917340}
   m_CullTransparentMesh: 0
+--- !u!114 &708917346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708917340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d55736fd1b61bb478bc27d9d4d4b5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera_obj: {fileID: 1347279018}
+  speedrotation: 0
+  Pressed: 0
 --- !u!1 &1229215469
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,9 +701,10 @@ GameObject:
   - component: {fileID: 1347279020}
   - component: {fileID: 1347279019}
   - component: {fileID: 1347279024}
-  - component: {fileID: 1347279023}
   - component: {fileID: 1347279026}
   - component: {fileID: 1347279025}
+  - component: {fileID: 1347279027}
+  - component: {fileID: 1347279023}
   - component: {fileID: 1347279022}
   m_Layer: 0
   m_Name: Main Camera
@@ -715,13 +804,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1347279018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5405abc2130ccde4fa689281fcad3ad9, type: 3}
+  m_Script: {fileID: 11500000, guid: a16be1dbb8a77514487f91aa61745f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedrotation: 3
-  ww: {fileID: 0}
-  ss: {fileID: 0}
-  ii: 0
+  Camera_obj: {fileID: 1347279018}
+  speedrotation: 0
+  Pressed: 0
 --- !u!143 &1347279024
 CharacterController:
   m_ObjectHideFlags: 0
@@ -766,6 +854,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchRotAdjust: 1
+--- !u!114 &1347279027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347279018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d55736fd1b61bb478bc27d9d4d4b5e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera_obj: {fileID: 1347279018}
+  speedrotation: 0
+  Pressed: 0
 --- !u!1 &1739922575
 GameObject:
   m_ObjectHideFlags: 0
