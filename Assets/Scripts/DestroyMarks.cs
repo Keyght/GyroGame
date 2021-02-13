@@ -49,7 +49,6 @@ public class DestroyMarks : MonoBehaviour
     void OnMouseDown()
     {
         DestroyMarks destroyMarks = new DestroyMarks(0, 0, 0, 0);
-        destroyMarks = gameObject.AddComponent<DestroyMarks>();
         if (gameObject.name.Contains("Sphere1"))
         {
             destroyMarks.set_number_marks1(1);
