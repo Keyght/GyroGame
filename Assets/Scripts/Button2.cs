@@ -37,7 +37,7 @@ public class Button2 : MonoBehaviour
         if (Pressed) {
             Debug.Log("Кнопка нажата");
             
-            Vector3 forward = transform.TransformDirection(Vector3.forward);
+            Vector3 forward = Camera_obj.transform.TransformDirection(Vector3.forward);
             _charactercontroller.SimpleMove(-forward * speed);
         }
     }
